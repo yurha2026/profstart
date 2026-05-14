@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ПрофСтарт — Твоя новая профессия онлайн</title>
+  <meta name="description" content="ПрофСтарт — онлайн-курсы по востребованным профессиям. Дизайнер интерьера, разработка игр, психолог, маркетплейсы, нейросети, тестирование ПО. Начни зарабатывать от 50 000 ₽ удалённо!"/>
+  <meta name="keywords" content="онлайн курсы, онлайн профессии, обучение онлайн, дизайнер интерьера курс, разработка игр обучение, психолог онлайн, маркетплейсы курс, нейросети обучение, тестирование ПО, удалённая работа, работа дома, фриланс"/>
+  <meta name="author" content="ПрофСтарт"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#1a1a2e"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="ПрофСтарт — Твоя новая профессия онлайн"/>
+  <meta property="og:description" content="Освой востребованную онлайн-профессию и зарабатывай от 50 000 ₽ удалённо!"/>
+  <meta property="og:url" content="https://prof-start.ru"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"/>
+  <meta property="og:site_name" content="ПрофСтарт"/>
+  <meta property="og:locale" content="ru_RU"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="ПрофСтарт — Твоя новая профессия онлайн"/>
+  <meta name="twitter:description" content="Освой востребованную онлайн-профессию и зарабатывай от 50 000 ₽ удалённо!"/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"/>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/graduation-cap.png"/>
+  <link rel="apple-touch-icon" href="https://img.icons8.com/fluency/48/graduation-cap.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108449234', 'ym');
+      ym(108449234, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108449234" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6c63ff;
+      --secondary: #ff6584;
+      --accent: #43d9ad;
+      --dark: #1a1a2e;
+      --light: #f4f6ff;
+      --text: #333;
+      --text-light: #666;
+      --vk: #0077ff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--light); color: var(--text); }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(26,26,46,0.97); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 60px; box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.5rem; color: #fff; text-decoration: none; letter-spacing: 1px; }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 32px; align-items: center; }
+    nav ul li a { color: #ccc; text-decoration: none; font-size: 0.95rem; font-weight: 600; font-family: 'Montserrat', sans-serif; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--accent); }
+    .nav-vk-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--vk); color: #fff !important; padding: 8px 16px;
+      border-radius: 20px; font-size: 0.85rem !important; font-weight: 700 !important;
+      transition: background 0.3s, transform 0.2s !important;
+    }
+    .nav-vk-btn:hover { background: #0060cc !important; color: #fff !important; transform: translateY(-2px); }
+    .burger { display: none; font-size: 1.5rem; color: #fff; cursor: pointer; }
+
+    /* ─── HERO ─── */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; align-items: center; padding: 100px 60px 60px;
+      position: relative; overflow: hidden; gap: 40px;
+    }
+    #home::before {
+      content: ''; position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+      top: -100px; right: -100px; border-radius: 50%;
+    }
+    #home::after {
+      content: ''; position: absolute; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,101,132,0.1) 0%, transparent 70%);
+      bottom: -50px; left: 0; border-radius: 50%;
+    }
+    .hero-content { flex: 1; max-width: 560px; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block; background: rgba(67,217,173,0.15); color: var(--accent);
+      border: 1px solid var(--accent); padding: 6px 18px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; font-family: 'Montserrat', sans-serif;
+    }
+    .hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: 3.2rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+    .hero-content h1 .highlight { background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-content p { color: #aaa; font-size: 1.1rem; line-height: 1.7; margin-bottom: 36px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .hero-tag { background: rgba(255,255,255,0.07); color: #ddd; padding: 7px 16px; border-radius: 30px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(108,99,255,0.4);
+    }
+    .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(108,99,255,0.5); }
+    .hero-vk-btn {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--vk);
+      color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(0,119,255,0.4);
+    }
+    .hero-vk-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,119,255,0.5); }
+    .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
+    .hero-image img { width: 100%; max-width: 500px; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); animation: float 4s ease-in-out infinite; object-fit: cover; height: 380px; display: block; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+    .hero-stats { display: flex; gap: 40px; margin-top: 48px; }
+    .stat { text-align: left; }
+    .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .stat-label { color: #888; font-size: 0.85rem; }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 60px; }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(255,101,132,0.1));
+      color: var(--primary); border: 1px solid rgba(108,99,255,0.3);
+      padding: 6px 18px; border-radius: 50px; font-size: 0.82rem; font-weight: 700;
+      margin-bottom: 16px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .section-header h2 { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--dark); margin-bottom: 14px; }
+    .section-header p { color: var(--text-light); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+    .divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); border-radius: 2px; margin: 16px auto 0; }
+
+    /* ─── SPECIALTIES ─── */
+    #specialties { background: #fff; }
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+    .spec-card {
+      background: var(--light); border-radius: 20px; padding: 32px;
+      border: 1px solid rgba(108,99,255,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      position: relative; overflow: hidden; cursor: pointer;
+      text-decoration: none; display: block; color: inherit;
+    }
+    .spec-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+    .spec-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(108,99,255,0.18); border-color: rgba(108,99,255,0.35); }
+    .spec-card .spec-hover-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--primary); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; opacity: 0; transform: translateY(6px); transition: opacity 0.3s, transform 0.3s; }
+    .spec-card:hover .spec-hover-hint { opacity: 1; transform: translateY(0); }
+    .spec-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #fff; margin-bottom: 20px; }
+    .spec-card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+    .spec-card p { color: var(--text-light); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+    .spec-salary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, rgba(67,217,173,0.1), rgba(67,217,173,0.05)); color: #0e9e74; border: 1px solid rgba(67,217,173,0.3); padding: 8px 16px; border-radius: 30px; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700; }
+
+    /* ─── COURSES ─── */
+    #courses { background: var(--light); }
+    .courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+    .course-card { background: #fff; border-radius: 22px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.07); transition: transform 0.35s, box-shadow 0.35s; display: flex; flex-direction: column; }
+    .course-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(108,99,255,0.18); }
+    .course-img-wrap { position: relative; width: 100%; height: 200px; min-height: 200px; overflow: hidden; display: block; flex-shrink: 0; background: #ddd; }
+    .course-img-wrap img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.5s ease; }
+    .course-card:hover .course-img-wrap img { transform: scale(1.07); }
+    .course-img-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.55) 100%); z-index: 1; pointer-events: none; }
+    .course-emoji { position: absolute; top: 14px; right: 16px; font-size: 2rem; line-height: 1; background: rgba(255,255,255,0.18); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border-radius: 12px; padding: 8px 10px; z-index: 2; }
+    .course-img-tag { position: absolute; bottom: 14px; left: 16px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; }
+    .course-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .course-body h3 { font-family: 'Montserrat', sans-serif; font-size: 1.08rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+    .course-body p { color: var(--text-light); font-size: 0.88rem; line-height: 1.65; flex: 1; margin-bottom: 20px; }
+    .course-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 13px; border-radius: 14px; text-align: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; transition: opacity 0.3s, transform 0.2s; }
+    .course-btn:hover { opacity: 0.88; transform: scale(1.02); }
+
+    /* ─── REVIEWS ─── */
+    #reviews { background: #fff; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .review-card { background: var(--light); border-radius: 20px; padding: 28px; border: 1px solid rgba(108,99,255,0.08); position: relative; transition: transform 0.3s, box-shadow 0.3s; }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(108,99,255,0.1); }
+    .review-card::before { content: '\201C'; font-size: 5rem; color: var(--primary); opacity: 0.12; position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1; }
+    .review-stars { color: #f5c518; font-size: 1rem; margin-bottom: 14px; }
+    .review-text { color: var(--text); font-size: 0.93rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: 14px; }
+    .reviewer-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+    .reviewer-info strong { display: block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--dark); }
+    .reviewer-info span { font-size: 0.82rem; color: var(--text-light); }
+
+    /* ─── CONTACT ─── */
+    #contact { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; }
+    #contact .section-header h2 { color: #fff; }
+    #contact .section-header p { color: #aaa; }
+    #contact .section-badge { color: var(--accent); border-color: rgba(67,217,173,0.4); background: rgba(67,217,173,0.08); }
+    .contact-box { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 50px; text-align: center; backdrop-filter: blur(10px); }
+    .contact-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; margin: 0 auto 24px; }
+    .contact-box h3 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+    .contact-box p { color: #aaa; margin-bottom: 28px; line-height: 1.7; }
+    .contact-links { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+    .contact-email { display: inline-flex; align-items: center; gap: 12px; background: rgba(67,217,173,0.1); border: 1px solid rgba(67,217,173,0.3); color: var(--accent); padding: 16px 32px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.3s; }
+    .contact-email:hover { background: rgba(67,217,173,0.2); }
+    .contact-vk { display: inline-flex; align-items: center; gap: 12px; background: rgba(0,119,255,0.15); border: 1px solid rgba(0,119,255,0.4); color: #4d9fff; padding: 16px 32px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.3s; }
+    .contact-vk:hover { background: rgba(0,119,255,0.25); }
+
+    /* ─── FLOAT VK ─── */
+    .vk-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--vk); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; text-decoration: none; box-shadow: 0 8px 30px rgba(0,119,255,0.5); z-index: 999; transition: transform 0.3s, box-shadow 0.3s; animation: pulse 2s infinite; }
+    .vk-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(0,119,255,0.7); }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 8px 30px rgba(0,119,255,0.5); } 50% { box-shadow: 0 8px 40px rgba(0,119,255,0.8); } }
+    .vk-float-label { position: fixed; bottom: 38px; right: 98px; background: #1a1a2e; color: #fff; padding: 8px 14px; border-radius: 10px; font-size: 0.82rem; font-family: 'Montserrat', sans-serif; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 998; }
+    .vk-float:hover + .vk-float-label { opacity: 1; }
+
+    /* ─── FOOTER ─── */
+    footer { background: #0d0d1a; color: #666; text-align: center; padding: 24px; font-size: 0.88rem; font-family: 'Montserrat', sans-serif; }
+    footer span { color: var(--accent); }
+    .footer-vk { display: inline-flex; align-items: center; gap: 8px; color: #4d9fff; text-decoration: none; margin-top: 10px; font-size: 0.88rem; font-family: 'Montserrat', sans-serif; transition: opacity 0.3s; }
+    .footer-vk:hover { opacity: 0.8; }
+
+    /* ─── RESPONSIVE ПЛАНШЕТ ─── */
+    @media (max-width: 900px) {
+      nav { padding: 14px 24px; }
+      nav ul { display: none; flex-direction: column; gap: 16px; position: absolute; top: 65px; left: 0; right: 0; background: #1a1a2e; padding: 24px; z-index: 999; }
+      nav ul.open { display: flex; }
+      .burger { display: block; }
+      #home { flex-direction: column; padding: 100px 24px 60px; text-align: center; gap: 40px; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-tags { justify-content: center; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-image img { max-width: 320px; height: 260px; }
+      section { padding: 70px 24px; }
+      .contact-box { padding: 32px 24px; }
+      .courses-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px; }
+      .course-img-wrap { height: 180px !important; min-height: 180px !important; display: block !important; position: relative !important; width: 100% !important; overflow: hidden !important; }
+      .course-img-wrap img { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+    }
+
+    /* ─── RESPONSIVE ТЕЛЕФОН ─── */
+    @media (max-width: 600px) {
+      .hero-content h1 { font-size: 1.8rem; }
+      .section-header h2 { font-size: 1.8rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-btn, .hero-vk-btn { width: 100%; justify-content: center; }
+      .courses-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .spec-grid { grid-template-columns: 1fr; gap: 20px; }
+      .course-card { width: 100% !important; border-radius: 18px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; }
+      .course-img-wrap { position: relative !important; display: block !important; width: 100% !important; height: 220px !important; min-height: 220px !important; max-height: 220px !important; overflow: hidden !important; flex-shrink: 0 !important; background: #ccc !important; }
+      .course-img-wrap img { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; min-height: 220px !important; object-fit: cover !important; object-position: center center !important; display: block !important; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+      .course-card:hover .course-img-wrap img { transform: none !important; }
+      .course-img-overlay { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; width: 100% !important; height: 100% !important; display: block !important; z-index: 1 !important; }
+      .course-emoji { position: absolute !important; top: 12px !important; right: 14px !important; font-size: 1.8rem !important; display: block !important; z-index: 3 !important; }
+      .course-img-tag { position: absolute !important; bottom: 12px !important; left: 14px !important; display: block !important; z-index: 3 !important; font-size: 0.72rem !important; }
+      .course-body { padding: 18px; flex: 1; }
+      .course-body h3 { font-size: 1rem; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
+      .contact-box { padding: 24px 16px; }
+      .contact-email, .contact-vk { font-size: 0.85rem; padding: 14px 20px; word-break: break-all; }
+      .vk-float { bottom: 20px; right: 20px; width: 54px; height: 54px; font-size: 1.5rem; }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      .course-img-wrap { height: 220px !important; min-height: 220px !important; position: relative !important; display: block !important; overflow: hidden !important; }
+      .course-img-wrap img { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <a class="logo" href="#home">Проф<span>Старт</span></a>
+  <ul id="nav-links">
+    <li><a href="#home">Главная</a></li>
+    <li><a href="#specialties">Специальности</a></li>
+    <li><a href="#courses">Курсы</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
+    <li><a href="#contact">Контакты</a></li>
+    <li>
+      <a href="https://vk.com/prof_start_ru" target="_blank" class="nav-vk-btn">
+        <i class="fab fa-vk"></i> ВКонтакте
+      </a>
+    </li>
+  </ul>
+  <div class="burger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-content">
+    <div class="hero-badge">🚀 Онлайн-образование нового поколения</div>
+    <h1>Твоя <span class="highlight">востребованная профессия</span> — уже рядом</h1>
+    <p>Освой современную профессию — стань дизайнером, разработчиком игр, психологом или специалистом по маркетплейсам. Работай из любой точки мира, даже находясь в декрете!</p>
+    <div class="hero-tags">
+      <span class="hero-tag">🎨 Дизайнер</span>
+      <span class="hero-tag">👩 Мамам в декрете</span>
+      <span class="hero-tag">🎮 Разработка игр</span>
+      <span class="hero-tag">🧠 Психолог</span>
+      <span class="hero-tag">🛒 Маркетплейсы</span>
+      <span class="hero-tag">🤖 Нейросети</span>
+      <span class="hero-tag">📈 Повышение квалификации</span>
+      <span class="hero-tag">🧪 Тестирование ПО</span>
+      <span class="hero-tag">💻 Техпомощник</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#courses" class="hero-btn">
+        Выбрать курс <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="https://vk.com/prof_start_ru" target="_blank" class="hero-vk-btn">
+        <i class="fab fa-vk"></i> Наш ВКонтакте
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">9+</div><div class="stat-label">Направлений</div></div>
+      <div class="stat"><div class="stat-number">1500+</div><div class="stat-label">Выпускников</div></div>
+      <div class="stat"><div class="stat-number">93%</div><div class="stat-label">Трудоустройство</div></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Онлайн-обучение"/>
+  </div>
+</section>
+
+<!-- ─── SPECIALTIES ─── -->
+<section id="specialties">
+  <div class="section-header">
+    <div class="section-badge">Направления</div>
+    <h2>Все специальности</h2>
+    <p>Нажмите на карточку — и перейдёте к курсу по этому направлению</p>
+    <div class="divider"></div>
+  </div>
+  <div class="spec-grid">
+    <a class="spec-card" href="#course-designer">
+      <div class="spec-icon">🎨</div>
+      <h3>Дизайнер интерьера</h3>
+      <p>Дизайнер интерьера создаёт стильные, функциональные и уютные пространства для жилых и коммерческих объектов. Специальность охватывает планировку помещений, подбор материалов и мебели, 3D-визуализацию и работу в программах ArchiCAD, SketchUp, 3ds Max. Профессия востребована у частных заказчиков, застройщиков и дизайн-студий по всей стране.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 60 000 – 180 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-moms">
+      <div class="spec-icon">👩‍👧</div>
+      <h3>Для мам в декрете</h3>
+      <p>Специальный трек для мам, которые хотят освоить удалённую профессию, не выходя из дома. Гибкий график, доступный темп обучения и поддержка куратора на каждом этапе. Выберите направление по душе и начните зарабатывать, не жертвуя временем с ребёнком.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 35 000 – 90 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-gamedev">
+      <div class="spec-icon">🎮</div>
+      <h3>Онлайн курсы по разработке игр</h3>
+      <p>Разработчик игр создаёт увлекательные игровые проекты для ПК, мобильных устройств и консолей. Вы освоите движки Unity и Unreal Engine, научитесь программировать на C# и C++, создавать игровую механику, уровни, персонажей. Геймдев — одна из самых высокооплачиваемых IT-профессий.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 80 000 – 250 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-psycho">
+      <div class="spec-icon">🧠</div>
+      <h3>Обучение на психолога</h3>
+      <p>Психолог помогает людям справляться с жизненными трудностями, тревогой, стрессом и личностными кризисами. Вы освоите методы консультирования, КПТ, психоанализ и коучинг. Профессия позволяет работать онлайн, вести частную практику и помогать людям по всему миру.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 60 000 – 200 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-market">
+      <div class="spec-icon">🛒</div>
+      <h3>Маркетплейсы</h3>
+      <p>Специалист по маркетплейсам управляет продажами на Wildberries, Ozon, Яндекс Маркет и AliExpress. В обязанности входят создание карточек товаров, настройка рекламы, управление ценами и аналитика. Ниша стремительно растёт, а спрос на таких специалистов превышает предложение.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 55 000 – 140 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-ai">
+      <div class="spec-icon">🤖</div>
+      <h3>Нейросети</h3>
+      <p>Курс по практическому применению нейросетей в работе и бизнесе. Вы научитесь использовать ChatGPT, Midjourney, Stable Diffusion, Claude и другие AI-инструменты для автоматизации задач, генерации контента и повышения продуктивности. Знание AI — конкурентное преимущество в любой профессии.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 90 000 – 260 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-qualify">
+      <div class="spec-icon">📈</div>
+      <h3>Повышение квалификации</h3>
+      <p>Короткие интенсивные курсы для специалистов, которые хотят углубить знания, освоить новые инструменты или сменить специализацию внутри своей сферы. Подойдут тем, кто уже работает, но хочет расти профессионально и увеличить доход без смены карьеры.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Прирост дохода: +30–70% после курса</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-qa">
+      <div class="spec-icon">🧪</div>
+      <h3>Тестирование ПО (QA)</h3>
+      <p>QA-инженер проверяет программное обеспечение на ошибки, составляет тест-кейсы и баг-репорты, работает с системами отслеживания задач (Jira, Trello). Профессия отлично подходит для входа в IT без опыта программирования. Высокий спрос на рынке и стабильная занятость.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 70 000 – 170 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+    <a class="spec-card" href="#course-tech">
+      <div class="spec-icon">💻</div>
+      <h3>Технический помощник</h3>
+      <p>Технический ассистент помогает специалистам и предпринимателям с рутинными задачами: настройкой сервисов, обработкой данных, администрированием сайтов, технической поддержкой клиентов и работой с CRM. Профессия востребована на фрилансе и идеально подходит для удалённой работы.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 45 000 – 95 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+  </div>
+</section>
+
+<!-- ─── COURSES ─── -->
+<section id="courses">
+  <div class="section-header">
+    <div class="section-badge">Обучение</div>
+    <h2>Наши курсы</h2>
+    <p>Выберите подходящее направление и начните обучение прямо сейчас</p>
+    <div class="divider"></div>
+  </div>
+  <div class="courses-grid">
+
+    <div class="course-card" id="course-designer">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&q=80" alt="Дизайнер интерьера"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🎨</div>
+        <div class="course-img-tag">Творчество</div>
+      </div>
+      <div class="course-body">
+        <h3>Дизайнер интерьера</h3>
+        <p>От основ композиции до создания полноценных интерьерных проектов. Научитесь работать в профессиональных программах и строить карьеру дизайнера.</p>
+        <a href="https://best-trening.ru/?o=18039&w=154170&l=9" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-moms">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=400&fit=crop&q=80" alt="Для мам в декрете"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">👩‍👧</div>
+        <div class="course-img-tag">Для мам</div>
+      </div>
+      <div class="course-body">
+        <h3>Для мам в декрете</h3>
+        <p>Гибкий трек для мам: освойте востребованную онлайн-профессию в удобном темпе и начните зарабатывать из дома, не жертвуя временем с детьми.</p>
+        <a href="https://best-trening.ru/?o=27381&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-gamedev">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=600&h=400&fit=crop&q=80" alt="Разработка игр"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🎮</div>
+        <div class="course-img-tag">GameDev</div>
+      </div>
+      <div class="course-body">
+        <h3>Онлайн курсы по разработке игр</h3>
+        <p>Освойте Unity и Unreal Engine, создайте собственные игры с нуля. Программирование, геймдизайн, монетизация — полный путь от идеи до готового проекта.</p>
+        <a href="https://best-trening.ru/?o=57109&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-psycho">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop&q=80" alt="Психолог"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🧠</div>
+        <div class="course-img-tag">Психология</div>
+      </div>
+      <div class="course-body">
+        <h3>Обучение на психолога</h3>
+        <p>Освойте методы консультирования, КПТ и коучинг. Ведите частную онлайн-практику, помогайте людям и стройте карьеру в одной из самых востребованных профессий.</p>
+        <a href="https://best-trening.ru/?o=54403&w=154170&l=5" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-market">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&q=80" alt="Маркетплейсы"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🛒</div>
+        <div class="course-img-tag">Продажи</div>
+      </div>
+      <div class="course-body">
+        <h3>Маркетплейсы</h3>
+        <p>Продавайте на Wildberries и Ozon как профессионал: карточки товаров, реклама, аналитика и масштабирование — от первой продажи до стабильного дохода.</p>
+        <a href="https://best-trening.ru/?o=32287&w=154170&l=2" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-ai">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=400&fit=crop&q=80" alt="Нейросети"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🤖</div>
+        <div class="course-img-tag">AI & Будущее</div>
+      </div>
+      <div class="course-body">
+        <h3>Нейросети</h3>
+        <p>ChatGPT, Midjourney, Claude и десятки AI-инструментов на практике. Автоматизируйте рутину, генерируйте контент и зарабатывайте больше с помощью AI.</p>
+        <a href="https://best-trening.ru/?o=6949&w=154170&l=2" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-qualify">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop&q=80" alt="Повышение квалификации"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">📈</div>
+        <div class="course-img-tag">Карьера</div>
+      </div>
+      <div class="course-body">
+        <h3>Повышение квалификации</h3>
+        <p>Интенсивные мини-курсы для работающих специалистов. Повысьте ценность, освойте новые инструменты и увеличьте доход уже через 2–4 недели.</p>
+        <a href="https://best-trening.ru/?o=77132&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-qa">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&q=80" alt="Тестирование ПО"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">🧪</div>
+        <div class="course-img-tag">IT</div>
+      </div>
+      <div class="course-body">
+        <h3>Тестирование ПО</h3>
+        <p>Войдите в IT без программирования. Освойте ручное и автоматизированное тестирование с нуля до уровня Junior QA Engineer с трудоустройством.</p>
+        <a href="https://best-trening.ru/?o=54693&w=154170&l=4" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-tech">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop&q=80" alt="Технический помощник"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-emoji">💻</div>
+        <div class="course-img-tag">Удалёнка</div>
+      </div>
+      <div class="course-body">
+        <h3>Технический помощник</h3>
+        <p>Станьте незаменимым техническим ассистентом для бизнеса. Удалённая работа, стабильный доход и гибкий график — старт карьеры с первого месяца.</p>
+        <a href="https://best-trening.ru/?o=8389&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── REVIEWS ─── -->
+<section id="reviews">
+  <div class="section-header">
+    <div class="section-badge">Отзывы</div>
+    <h2>Что говорят наши студенты</h2>
+    <p>Реальные истории людей, которые изменили свою жизнь с помощью наших курсов</p>
+    <div class="divider"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Я мама двоих детей и была уверена, что времени на учёбу нет. Курс для мам в декрете оказался настолько удобным — 20–30 минут в день. Уже через два месяца взяла первого клиента. Теперь зарабатываю из дома!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">А</div>
+        <div class="reviewer-info"><strong>Анастасия К.</strong><span>Фрилансер, Казань</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс по тестированию ПО — лучшее решение в моей жизни. Я работал охранником и мечтал о смене профессии. За 3 месяца освоил всё с нуля и получил оффер в IT-компанию. Зарплата выросла в 2,5 раза!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Д</div>
+        <div class="reviewer-info"><strong>Дмитрий В.</strong><span>Junior QA Engineer, Москва</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Прошла курс по маркетплейсам и открыла свой магазин на Wildberries. Уже на второй месяц вышла на оборот 180 000 рублей. Курс дал пошаговый план с реальными примерами. Очень рекомендую!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">М</div>
+        <div class="reviewer-info"><strong>Мария Н.</strong><span>Продавец на WB, Новосибирск</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс по разработке игр — это мечта детства, ставшая реальностью! Уже через 4 месяца выложил первую игру в Steam. Преподаватели объясняют всё доступно. Лучшее вложение в себя!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">А</div>
+        <div class="reviewer-info"><strong>Алексей М.</strong><span>Инди-разработчик, Самара</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс на психолога полностью изменил мою жизнь. Ушла из найма и открыла частную онлайн-практику. Уже через полгода работаю с 12 клиентами и зарабатываю вдвое больше прежнего!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Е</div>
+        <div class="reviewer-info"><strong>Екатерина Р.</strong><span>Практикующий психолог, Екатеринбург</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс технического помощника помог мне за 6 недель найти работу на удалёнке. Подробная программа, живые вебинары и поддержка в чате — всё на высшем уровне. Зарабатываю больше, чем на офисной работе!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">О</div>
+        <div class="reviewer-info"><strong>Ольга Т.</strong><span>Технический ассистент, Уфа</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-badge">Связаться с нами</div>
+    <h2>Контакты</h2>
+    <p>Есть вопросы? Напишите нам — мы ответим в течение нескольких часов</p>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-box">
+    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+    <h3>Свяжитесь с нами</h3>
+    <p>Мы с радостью ответим на любые вопросы о курсах, программе обучения, оплате и карьерных перспективах!</p>
+    <div class="contact-links">
+      <a href="mailto:yurha.1990@gmail.com" class="contact-email">
+        <i class="fas fa-envelope"></i> yurha.1990@gmail.com
+      </a>
+      <a href="https://vk.com/prof_start_ru" target="_blank" class="contact-vk">
+        <i class="fab fa-vk"></i> Написать ВКонтакте
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2025 <span>ПрофСтарт</span> — Твоя новая профессия онлайн. Все права защищены.</p>
+  <br>
+  <a href="https://vk.com/prof_start_ru" target="_blank" class="footer-vk">
+    <i class="fab fa-vk"></i> Подписывайтесь на наше сообщество ВКонтакте
+  </a>
+</footer>
+
+<!-- ✅ Плавающая кнопка ВКонтакте -->
+<a href="https://vk.com/prof_start_ru" target="_blank" class="vk-float">
+  <i class="fab fa-vk"></i>
+</a>
+<div class="vk-float-label">Наш ВКонтакте</div>
+
+<script>
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav-links').classList.remove('open');
+    });
+  });
+
+  document.querySelectorAll('.spec-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        const offset = 90;
+        const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        setTimeout(() => {
+          targetEl.style.transition = 'box-shadow 0.4s, transform 0.4s';
+          targetEl.style.boxShadow = '0 0 0 3px #6c63ff, 0 20px 50px rgba(108,99,255,0.35)';
+          targetEl.style.transform = 'translateY(-6px)';
+          setTimeout(() => {
+            targetEl.style.boxShadow = '';
+            targetEl.style.transform = '';
+          }, 1800);
+        }, 600);
+      }
+    });
+  });
+
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav ul li a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? '#43d9ad' : '';
+    });
+  });
+
+  function fixImages() {
+    document.querySelectorAll('.course-img-wrap').forEach(function(wrap) {
+      wrap.style.cssText = 'position:relative!important;display:block!important;width:100%!important;height:220px!important;min-height:220px!important;overflow:hidden!important;background:#ddd!important;';
+      var img = wrap.querySelector('img');
+      if (img) {
+        img.style.cssText = 'position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;opacity:1!important;visibility:visible!important;';
+      }
+    });
+  }
+  fixImages();
+  document.addEventListener('DOMContentLoaded', fixImages);
+  window.addEventListener('load', fixImages);
+  setTimeout(fixImages, 500);
+  setTimeout(fixImages, 1500);
+</script>
+</body>
+</html>
