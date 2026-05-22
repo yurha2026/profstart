@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ПрофСтарт — Твоя новая профессия онлайн</title>
-  <meta name="description" content="ПрофСтарт — онлайн-курсы по востребованным профессиям. Дизайнер интерьера, разработка игр, психолог, маркетплейсы, нейросети, тестирование ПО. Начни зарабатывать от 50 000 ₽ удалённо!"/>
-  <meta name="keywords" content="онлайн курсы, онлайн профессии, обучение онлайн, дизайнер интерьера курс, разработка игр обучение, психолог онлайн, маркетплейсы курс, нейросети обучение, тестирование ПО, удалённая работа, работа дома, фриланс"/>
+  <meta name="description" content="ПрофСтарт — онлайн-курсы по востребованным профессиям. Дизайнер, SMM, фотограф, продакт-менеджер, маркетплейсы, нейросети. Начни зарабатывать от 50 000 ₽ удалённо!"/>
+  <meta name="keywords" content="онлайн курсы, онлайн профессии, обучение онлайн, дизайнер интерьера курс, smm специалист, фотограф видеограф, продакт менеджер, маркетплейсы курс, нейросети обучение, тестирование ПО, удалённая работа"/>
   <meta name="author" content="ПрофСтарт"/>
   <meta name="robots" content="index, follow"/>
   <meta name="theme-color" content="#1a1a2e"/>
@@ -63,63 +63,69 @@
     nav ul { list-style: none; display: flex; gap: 32px; align-items: center; }
     nav ul li a { color: #ccc; text-decoration: none; font-size: 0.95rem; font-weight: 600; font-family: 'Montserrat', sans-serif; transition: color 0.3s; }
     nav ul li a:hover { color: var(--accent); }
-    .nav-vk-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--vk); color: #fff !important; padding: 8px 16px;
-      border-radius: 20px; font-size: 0.85rem !important; font-weight: 700 !important;
-      transition: background 0.3s, transform 0.2s !important;
-    }
+    .nav-vk-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--vk); color: #fff !important; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem !important; font-weight: 700 !important; transition: background 0.3s, transform 0.2s !important; }
     .nav-vk-btn:hover { background: #0060cc !important; color: #fff !important; transform: translateY(-2px); }
     .burger { display: none; font-size: 1.5rem; color: #fff; cursor: pointer; }
 
     /* ─── HERO ─── */
-    #home {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      display: flex; align-items: center; padding: 100px 60px 60px;
-      position: relative; overflow: hidden; gap: 40px;
-    }
-    #home::before {
-      content: ''; position: absolute; width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
-      top: -100px; right: -100px; border-radius: 50%;
-    }
-    #home::after {
-      content: ''; position: absolute; width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(255,101,132,0.1) 0%, transparent 70%);
-      bottom: -50px; left: 0; border-radius: 50%;
-    }
-    .hero-content { flex: 1; max-width: 560px; position: relative; z-index: 1; }
-    .hero-badge {
-      display: inline-block; background: rgba(67,217,173,0.15); color: var(--accent);
-      border: 1px solid var(--accent); padding: 6px 18px; border-radius: 50px;
-      font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; font-family: 'Montserrat', sans-serif;
-    }
+    #home { min-height: 100vh; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); display: flex; align-items: center; padding: 100px 60px 60px; position: relative; overflow: hidden; gap: 40px; }
+    #home::before { content: ''; position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%); top: -100px; right: -100px; border-radius: 50%; }
+    #home::after { content: ''; position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,101,132,0.1) 0%, transparent 70%); bottom: -50px; left: 0; border-radius: 50%; }
+    .hero-content { flex: 1; max-width: 580px; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(67,217,173,0.15); color: var(--accent); border: 1px solid var(--accent); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; font-family: 'Montserrat', sans-serif; }
     .hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: 3.2rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 20px; }
     .hero-content h1 .highlight { background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-content p { color: #aaa; font-size: 1.1rem; line-height: 1.7; margin-bottom: 36px; }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .hero-content p { color: #aaa; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; }
+
+    /* ✅ Блок пробных уроков */
+    .hero-trial {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+      background: rgba(67,217,173,0.08);
+      border: 1px solid rgba(67,217,173,0.25);
+      border-radius: 16px;
+      padding: 16px 20px;
+    }
+    .hero-trial-title {
+      width: 100%;
+      color: var(--accent);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-trial-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.06);
+      color: #ddd;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero-trial-item i { color: var(--accent); font-size: 0.75rem; }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
     .hero-tag { background: rgba(255,255,255,0.07); color: #ddd; padding: 7px 16px; border-radius: 30px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif; }
     .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none;
-      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(108,99,255,0.4);
-    }
+    .hero-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(108,99,255,0.4); }
     .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(108,99,255,0.5); }
-    .hero-vk-btn {
-      display: inline-flex; align-items: center; gap: 8px; background: var(--vk);
-      color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none;
-      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(0,119,255,0.4);
-    }
+    .hero-vk-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--vk); color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 30px rgba(0,119,255,0.4); }
     .hero-vk-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,119,255,0.5); }
     .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
     .hero-image img { width: 100%; max-width: 500px; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); animation: float 4s ease-in-out infinite; object-fit: cover; height: 380px; display: block; }
     @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
-    .hero-stats { display: flex; gap: 40px; margin-top: 48px; }
+    .hero-stats { display: flex; gap: 40px; margin-top: 40px; }
     .stat { text-align: left; }
     .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); }
     .stat-label { color: #888; font-size: 0.85rem; }
@@ -127,13 +133,7 @@
     /* ─── SECTIONS ─── */
     section { padding: 100px 60px; }
     .section-header { text-align: center; margin-bottom: 60px; }
-    .section-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(255,101,132,0.1));
-      color: var(--primary); border: 1px solid rgba(108,99,255,0.3);
-      padding: 6px 18px; border-radius: 50px; font-size: 0.82rem; font-weight: 700;
-      margin-bottom: 16px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px;
-    }
+    .section-badge { display: inline-block; background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(255,101,132,0.1)); color: var(--primary); border: 1px solid rgba(108,99,255,0.3); padding: 6px 18px; border-radius: 50px; font-size: 0.82rem; font-weight: 700; margin-bottom: 16px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
     .section-header h2 { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--dark); margin-bottom: 14px; }
     .section-header p { color: var(--text-light); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
     .divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); border-radius: 2px; margin: 16px auto 0; }
@@ -141,13 +141,7 @@
     /* ─── SPECIALTIES ─── */
     #specialties { background: #fff; }
     .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
-    .spec-card {
-      background: var(--light); border-radius: 20px; padding: 32px;
-      border: 1px solid rgba(108,99,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-      position: relative; overflow: hidden; cursor: pointer;
-      text-decoration: none; display: block; color: inherit;
-    }
+    .spec-card { background: var(--light); border-radius: 20px; padding: 32px; border: 1px solid rgba(108,99,255,0.1); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; color: inherit; }
     .spec-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
     .spec-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(108,99,255,0.18); border-color: rgba(108,99,255,0.35); }
     .spec-card .spec-hover-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--primary); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; opacity: 0; transform: translateY(6px); transition: opacity 0.3s, transform 0.3s; }
@@ -168,6 +162,25 @@
     .course-img-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.55) 100%); z-index: 1; pointer-events: none; }
     .course-emoji { position: absolute; top: 14px; right: 16px; font-size: 2rem; line-height: 1; background: rgba(255,255,255,0.18); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border-radius: 12px; padding: 8px 10px; z-index: 2; }
     .course-img-tag { position: absolute; bottom: 14px; left: 16px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; }
+
+    /* ✅ Бейдж пробного урока */
+    .course-trial-badge {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      background: linear-gradient(135deg, var(--accent), #2eb891);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
     .course-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
     .course-body h3 { font-family: 'Montserrat', sans-serif; font-size: 1.08rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
     .course-body p { color: var(--text-light); font-size: 0.88rem; line-height: 1.65; flex: 1; margin-bottom: 20px; }
@@ -226,6 +239,7 @@
       .hero-tags { justify-content: center; }
       .hero-buttons { justify-content: center; }
       .hero-stats { justify-content: center; }
+      .hero-trial { justify-content: center; }
       .hero-image img { max-width: 320px; height: 260px; }
       section { padding: 70px 24px; }
       .contact-box { padding: 32px 24px; }
@@ -249,6 +263,7 @@
       .course-img-overlay { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; width: 100% !important; height: 100% !important; display: block !important; z-index: 1 !important; }
       .course-emoji { position: absolute !important; top: 12px !important; right: 14px !important; font-size: 1.8rem !important; display: block !important; z-index: 3 !important; }
       .course-img-tag { position: absolute !important; bottom: 12px !important; left: 14px !important; display: block !important; z-index: 3 !important; font-size: 0.72rem !important; }
+      .course-trial-badge { display: none !important; }
       .course-body { padding: 18px; flex: 1; }
       .course-body h3 { font-size: 1rem; }
       .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
@@ -290,7 +305,21 @@
   <div class="hero-content">
     <div class="hero-badge">🚀 Онлайн-образование нового поколения</div>
     <h1>Твоя <span class="highlight">востребованная профессия</span> — уже рядом</h1>
-    <p>Освой современную профессию — стань дизайнером, разработчиком игр, психологом или специалистом по маркетплейсам. Работай из любой точки мира, даже находясь в декрете!</p>
+    <p>Освой современную профессию — стань дизайнером, SMM-специалистом, фотографом, продакт-менеджером или разработчиком игр. Работай из любой точки мира!</p>
+
+    <!-- ✅ БЛОК ПРОБНЫХ УРОКОВ -->
+    <div class="hero-trial">
+      <div class="hero-trial-title">
+        <i class="fas fa-gift"></i>
+        🎁 На всех курсах доступны бесплатные пробные уроки и вебинары!
+      </div>
+      <span class="hero-trial-item"><i class="fas fa-check-circle"></i> Пробный урок бесплатно</span>
+      <span class="hero-trial-item"><i class="fas fa-check-circle"></i> Живые вебинары</span>
+      <span class="hero-trial-item"><i class="fas fa-check-circle"></i> Без обязательств</span>
+      <span class="hero-trial-item"><i class="fas fa-check-circle"></i> Куратор на связи</span>
+      <span class="hero-trial-item"><i class="fas fa-check-circle"></i> Сертификат после курса</span>
+    </div>
+
     <div class="hero-tags">
       <span class="hero-tag">🎨 Дизайнер</span>
       <span class="hero-tag">👩 Мамам в декрете</span>
@@ -301,6 +330,9 @@
       <span class="hero-tag">📈 Повышение квалификации</span>
       <span class="hero-tag">🧪 Тестирование ПО</span>
       <span class="hero-tag">💻 Техпомощник</span>
+      <span class="hero-tag">📸 Фотограф-видеограф</span>
+      <span class="hero-tag">📱 SMM-специалист</span>
+      <span class="hero-tag">🚀 Продакт-менеджер</span>
     </div>
     <div class="hero-buttons">
       <a href="#courses" class="hero-btn">
@@ -311,7 +343,7 @@
       </a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-number">9+</div><div class="stat-label">Направлений</div></div>
+      <div class="stat"><div class="stat-number">12+</div><div class="stat-label">Направлений</div></div>
       <div class="stat"><div class="stat-number">1500+</div><div class="stat-label">Выпускников</div></div>
       <div class="stat"><div class="stat-number">93%</div><div class="stat-label">Трудоустройство</div></div>
     </div>
@@ -330,13 +362,15 @@
     <div class="divider"></div>
   </div>
   <div class="spec-grid">
+
     <a class="spec-card" href="#course-designer">
       <div class="spec-icon">🎨</div>
       <h3>Дизайнер интерьера</h3>
-      <p>Дизайнер интерьера создаёт стильные, функциональные и уютные пространства для жилых и коммерческих объектов. Специальность охватывает планировку помещений, подбор материалов и мебели, 3D-визуализацию и работу в программах ArchiCAD, SketchUp, 3ds Max. Профессия востребована у частных заказчиков, застройщиков и дизайн-студий по всей стране.</p>
+      <p>Дизайнер интерьера создаёт стильные, функциональные и уютные пространства для жилых и коммерческих объектов. Специальность охватывает планировку помещений, подбор материалов и мебели, 3D-визуализацию и работу в программах ArchiCAD, SketchUp, 3ds Max.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 60 000 – 180 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-moms">
       <div class="spec-icon">👩‍👧</div>
       <h3>Для мам в декрете</h3>
@@ -344,55 +378,87 @@
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 35 000 – 90 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-gamedev">
       <div class="spec-icon">🎮</div>
       <h3>Онлайн курсы по разработке игр</h3>
-      <p>Разработчик игр создаёт увлекательные игровые проекты для ПК, мобильных устройств и консолей. Вы освоите движки Unity и Unreal Engine, научитесь программировать на C# и C++, создавать игровую механику, уровни, персонажей. Геймдев — одна из самых высокооплачиваемых IT-профессий.</p>
+      <p>Разработчик игр создаёт увлекательные игровые проекты для ПК, мобильных устройств и консолей. Вы освоите движки Unity и Unreal Engine, научитесь программировать на C# и C++, создавать игровую механику, уровни, персонажей.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 80 000 – 250 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-psycho">
       <div class="spec-icon">🧠</div>
       <h3>Обучение на психолога</h3>
-      <p>Психолог помогает людям справляться с жизненными трудностями, тревогой, стрессом и личностными кризисами. Вы освоите методы консультирования, КПТ, психоанализ и коучинг. Профессия позволяет работать онлайн, вести частную практику и помогать людям по всему миру.</p>
+      <p>Психолог помогает людям справляться с жизненными трудностями, тревогой, стрессом и личностными кризисами. Вы освоите методы консультирования, КПТ, психоанализ и коучинг. Профессия позволяет работать онлайн и вести частную практику.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 60 000 – 200 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-market">
       <div class="spec-icon">🛒</div>
       <h3>Маркетплейсы</h3>
-      <p>Специалист по маркетплейсам управляет продажами на Wildberries, Ozon, Яндекс Маркет и AliExpress. В обязанности входят создание карточек товаров, настройка рекламы, управление ценами и аналитика. Ниша стремительно растёт, а спрос на таких специалистов превышает предложение.</p>
+      <p>Специалист по маркетплейсам управляет продажами на Wildberries, Ozon, Яндекс Маркет и AliExpress. В обязанности входят создание карточек товаров, настройка рекламы, управление ценами и аналитика. Ниша стремительно растёт.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 55 000 – 140 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-ai">
       <div class="spec-icon">🤖</div>
       <h3>Нейросети</h3>
-      <p>Курс по практическому применению нейросетей в работе и бизнесе. Вы научитесь использовать ChatGPT, Midjourney, Stable Diffusion, Claude и другие AI-инструменты для автоматизации задач, генерации контента и повышения продуктивности. Знание AI — конкурентное преимущество в любой профессии.</p>
+      <p>Курс по практическому применению нейросетей в работе и бизнесе. Вы научитесь использовать ChatGPT, Midjourney, Stable Diffusion, Claude и другие AI-инструменты для автоматизации задач и генерации контента.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 90 000 – 260 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-qualify">
       <div class="spec-icon">📈</div>
       <h3>Повышение квалификации</h3>
-      <p>Короткие интенсивные курсы для специалистов, которые хотят углубить знания, освоить новые инструменты или сменить специализацию внутри своей сферы. Подойдут тем, кто уже работает, но хочет расти профессионально и увеличить доход без смены карьеры.</p>
+      <p>Короткие интенсивные курсы для специалистов, которые хотят углубить знания, освоить новые инструменты или сменить специализацию внутри своей сферы. Подойдут тем, кто уже работает, но хочет расти профессионально.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Прирост дохода: +30–70% после курса</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-qa">
       <div class="spec-icon">🧪</div>
       <h3>Тестирование ПО (QA)</h3>
-      <p>QA-инженер проверяет программное обеспечение на ошибки, составляет тест-кейсы и баг-репорты, работает с системами отслеживания задач (Jira, Trello). Профессия отлично подходит для входа в IT без опыта программирования. Высокий спрос на рынке и стабильная занятость.</p>
+      <p>QA-инженер проверяет программное обеспечение на ошибки, составляет тест-кейсы и баг-репорты, работает с системами отслеживания задач (Jira, Trello). Профессия отлично подходит для входа в IT без опыта программирования.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 70 000 – 170 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
     <a class="spec-card" href="#course-tech">
       <div class="spec-icon">💻</div>
       <h3>Технический помощник</h3>
-      <p>Технический ассистент помогает специалистам и предпринимателям с рутинными задачами: настройкой сервисов, обработкой данных, администрированием сайтов, технической поддержкой клиентов и работой с CRM. Профессия востребована на фрилансе и идеально подходит для удалённой работы.</p>
+      <p>Технический ассистент помогает специалистам и предпринимателям с рутинными задачами: настройкой сервисов, обработкой данных, администрированием сайтов, технической поддержкой клиентов и работой с CRM.</p>
       <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 45 000 – 95 000 ₽/мес</span>
       <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
     </a>
+
+    <a class="spec-card" href="#course-photo">
+      <div class="spec-icon">📸</div>
+      <h3>Фотограф-видеограф</h3>
+      <p>Фотограф-видеограф создаёт профессиональный визуальный контент для бизнеса, брендов и частных клиентов. Вы освоите технику съёмки, работу со светом, обработку фото и монтаж видео в Adobe Lightroom, Photoshop и Premiere Pro.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 60 000 – 200 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+
+    <a class="spec-card" href="#course-smm">
+      <div class="spec-icon">📱</div>
+      <h3>SMM-специалист</h3>
+      <p>SMM-специалист управляет социальными сетями компаний и брендов: создаёт контент-планы, пишет посты, запускает рекламу, анализирует статистику и растит аудиторию. Работа полностью удалённая — можно вести несколько клиентов одновременно.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 50 000 – 150 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+
+    <a class="spec-card" href="#course-product">
+      <div class="spec-icon">🚀</div>
+      <h3>Продакт-менеджер</h3>
+      <p>Продакт-менеджер управляет разработкой продуктов — от идеи до запуска. Он анализирует рынок, определяет приоритеты, работает с командой разработчиков и дизайнеров. Одна из самых высокооплачиваемых профессий в IT.</p>
+      <span class="spec-salary"><i class="fas fa-ruble-sign"></i> Средняя зарплата: 120 000 – 350 000 ₽/мес</span>
+      <div class="spec-hover-hint"><i class="fas fa-arrow-right"></i> Смотреть курс</div>
+    </a>
+
   </div>
 </section>
 
@@ -401,7 +467,7 @@
   <div class="section-header">
     <div class="section-badge">Обучение</div>
     <h2>Наши курсы</h2>
-    <p>Выберите подходящее направление и начните обучение прямо сейчас</p>
+    <p>На каждом курсе есть бесплатный пробный урок или вебинар — попробуйте прежде чем решить!</p>
     <div class="divider"></div>
   </div>
   <div class="courses-grid">
@@ -410,6 +476,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&q=80" alt="Дизайнер интерьера"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
         <div class="course-emoji">🎨</div>
         <div class="course-img-tag">Творчество</div>
       </div>
@@ -426,6 +493,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=400&fit=crop&q=80" alt="Для мам в декрете"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
         <div class="course-emoji">👩‍👧</div>
         <div class="course-img-tag">Для мам</div>
       </div>
@@ -442,6 +510,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=600&h=400&fit=crop&q=80" alt="Разработка игр"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-video"></i> Вебинар бесплатно</div>
         <div class="course-emoji">🎮</div>
         <div class="course-img-tag">GameDev</div>
       </div>
@@ -458,6 +527,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop&q=80" alt="Психолог"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
         <div class="course-emoji">🧠</div>
         <div class="course-img-tag">Психология</div>
       </div>
@@ -474,6 +544,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&q=80" alt="Маркетплейсы"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-video"></i> Вебинар бесплатно</div>
         <div class="course-emoji">🛒</div>
         <div class="course-img-tag">Продажи</div>
       </div>
@@ -490,6 +561,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=400&fit=crop&q=80" alt="Нейросети"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
         <div class="course-emoji">🤖</div>
         <div class="course-img-tag">AI & Будущее</div>
       </div>
@@ -506,6 +578,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop&q=80" alt="Повышение квалификации"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-video"></i> Вебинар бесплатно</div>
         <div class="course-emoji">📈</div>
         <div class="course-img-tag">Карьера</div>
       </div>
@@ -522,6 +595,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&q=80" alt="Тестирование ПО"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
         <div class="course-emoji">🧪</div>
         <div class="course-img-tag">IT</div>
       </div>
@@ -538,6 +612,7 @@
       <div class="course-img-wrap">
         <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop&q=80" alt="Технический помощник"/>
         <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-video"></i> Вебинар бесплатно</div>
         <div class="course-emoji">💻</div>
         <div class="course-img-tag">Удалёнка</div>
       </div>
@@ -545,6 +620,57 @@
         <h3>Технический помощник</h3>
         <p>Станьте незаменимым техническим ассистентом для бизнеса. Удалённая работа, стабильный доход и гибкий график — старт карьеры с первого месяца.</p>
         <a href="https://best-trening.ru/?o=8389&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-photo">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&h=400&fit=crop&q=80" alt="Фотограф-видеограф"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
+        <div class="course-emoji">📸</div>
+        <div class="course-img-tag">Фото & Видео</div>
+      </div>
+      <div class="course-body">
+        <h3>Фотограф-видеограф</h3>
+        <p>Освойте технику съёмки, работу со светом и монтаж видео. Создавайте профессиональный контент для бизнеса и зарабатывайте на любимом деле!</p>
+        <a href="https://best-trening.ru/?o=45674&w=154170&l=8" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-smm">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop&q=80" alt="SMM-специалист"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-video"></i> Вебинар бесплатно</div>
+        <div class="course-emoji">📱</div>
+        <div class="course-img-tag">Соцсети</div>
+      </div>
+      <div class="course-body">
+        <h3>SMM-специалист</h3>
+        <p>Управляйте соцсетями брендов и компаний: контент-план, посты, реклама, аналитика. Работайте удалённо с несколькими клиентами одновременно!</p>
+        <a href="https://best-trening.ru/?o=61701&w=154170&l=84" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
+          Перейти к курсу <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card" id="course-product">
+      <div class="course-img-wrap">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80" alt="Продакт-менеджер"/>
+        <div class="course-img-overlay"></div>
+        <div class="course-trial-badge"><i class="fas fa-play-circle"></i> Пробный урок</div>
+        <div class="course-emoji">🚀</div>
+        <div class="course-img-tag">IT & Продукт</div>
+      </div>
+      <div class="course-body">
+        <h3>Продакт-менеджер</h3>
+        <p>Управляйте созданием IT-продуктов от идеи до запуска. Одна из самых высокооплачиваемых профессий в IT — без навыков программирования!</p>
+        <a href="https://best-trening.ru/?o=19915&w=154170&l=1" target="_blank" class="course-btn" onclick="ym(108449234,'reachGoal','course_click')">
           Перейти к курсу <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -562,6 +688,7 @@
     <div class="divider"></div>
   </div>
   <div class="reviews-grid">
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">Я мама двоих детей и была уверена, что времени на учёбу нет. Курс для мам в декрете оказался настолько удобным — 20–30 минут в день. Уже через два месяца взяла первого клиента. Теперь зарабатываю из дома!</p>
@@ -570,6 +697,7 @@
         <div class="reviewer-info"><strong>Анастасия К.</strong><span>Фрилансер, Казань</span></div>
       </div>
     </div>
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">Курс по тестированию ПО — лучшее решение в моей жизни. Я работал охранником и мечтал о смене профессии. За 3 месяца освоил всё с нуля и получил оффер в IT-компанию. Зарплата выросла в 2,5 раза!</p>
@@ -578,6 +706,7 @@
         <div class="reviewer-info"><strong>Дмитрий В.</strong><span>Junior QA Engineer, Москва</span></div>
       </div>
     </div>
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">Прошла курс по маркетплейсам и открыла свой магазин на Wildberries. Уже на второй месяц вышла на оборот 180 000 рублей. Курс дал пошаговый план с реальными примерами. Очень рекомендую!</p>
@@ -586,30 +715,214 @@
         <div class="reviewer-info"><strong>Мария Н.</strong><span>Продавец на WB, Новосибирск</span></div>
       </div>
     </div>
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">Курс по разработке игр — это мечта детства, ставшая реальностью! Уже через 4 месяца выложил первую игру в Steam. Преподаватели объясняют всё доступно. Лучшее вложение в себя!</p>
+      <p class="review-text">Курс SMM-специалиста полностью изменил мою жизнь! Теперь веду 5 клиентов удалённо и зарабатываю больше чем на прежней офисной работе. Гибкий график и любимое дело — что ещё нужно!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">В</div>
+        <div class="reviewer-info"><strong>Валерия С.</strong><span>SMM-специалист, Санкт-Петербург</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс фотографа-видеографа открыл мне новый мир! Начал снимать для местного бизнеса — уже через 3 месяца полная запись на месяц вперёд. Доход вырос в 3 раза по сравнению с прошлой работой!</p>
       <div class="reviewer">
         <div class="reviewer-avatar">А</div>
-        <div class="reviewer-info"><strong>Алексей М.</strong><span>Инди-разработчик, Самара</span></div>
+        <div class="reviewer-info"><strong>Артём К.</strong><span>Фотограф-видеограф, Краснодар</span></div>
       </div>
     </div>
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">Курс на психолога полностью изменил мою жизнь. Ушла из найма и открыла частную онлайн-практику. Уже через полгода работаю с 12 клиентами и зарабатываю вдвое больше прежнего!</p>
+      <p class="review-text">Курс продакт-менеджера — лучшая инвестиция в себя! Через 6 месяцев получил должность PM в IT-стартапе. Зарплата 180 000 ₽ и работа полностью удалённая. Рекомендую всем кто хочет в IT!</p>
       <div class="reviewer">
-        <div class="reviewer-avatar">Е</div>
-        <div class="reviewer-info"><strong>Екатерина Р.</strong><span>Практикующий психолог, Екатеринбург</span></div>
+        <div class="reviewer-avatar">И</div>
+        <div class="reviewer-info"><strong>Игорь М.</strong><span>Продакт-менеджер, Москва</span></div>
       </div>
     </div>
+
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">Курс технического помощника помог мне за 6 недель найти работу на удалёнке. Подробная программа, живые вебинары и поддержка в чате — всё на высшем уровне. Зарабатываю больше, чем на офисной работе!</p>
+      <p class="review-text">Начала с пробного урока по дизайну интерьера — и влюбилась в профессию! Уже через 5 месяцев взяла первый проект за 40 000 рублей. Теперь в моём портфолио 8 реализованных проектов!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Н</div>
+        <div class="reviewer-info"><strong>Наталья Р.</strong><span>Дизайнер интерьера, Воронеж</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Бесплатный вебинар по нейросетям просто взорвал мозг! Сразу записался на полный курс. Теперь использую ChatGPT и Midjourney каждый день в работе. Производительность выросла в 4 раза!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">С</div>
+        <div class="reviewer-info"><strong>Сергей Л.</strong><span>Контент-менеджер, Екатеринбург</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Пробный урок по разработке игр убедил меня что это моё! До этого думала что геймдев только для программистов. Оказалось — нет! Сейчас работаю над своей первой мобильной игрой. Невероятно!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">К</div>
+        <div class="reviewer-info"><strong>Кристина В.</strong><span>Инди-разработчик, Тюмень</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс по маркетплейсам окупился за 3 недели! Открыл магазин на Ozon, настроил карточки как учили — и пошли заказы. Теперь масштабирую бизнес и планирую выйти на Wildberries. Спасибо!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">П</div>
+        <div class="reviewer-info"><strong>Павел Т.</strong><span>Владелец магазина Ozon, Челябинск</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Я в декрете с тремя детьми и думала что про работу можно забыть. Вебинар для мам открыл глаза! За 4 месяца освоила SMM и веду 3 клиентов. Зарабатываю 55 000 ₽ не выходя из дома!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Т</div>
+        <div class="reviewer-info"><strong>Татьяна М.</strong><span>SMM-фрилансер, Омск</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">После пробного вебинара по психологии понял что хочу помогать людям. Прошёл полный курс, получил сертификат и открыл практику онлайн. Уже 8 постоянных клиентов и стабильный доход 90 000 ₽!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Р</div>
+        <div class="reviewer-info"><strong>Роман Д.</strong><span>Психолог онлайн, Ростов-на-Дону</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Работала учителем 12 лет. Решила попробовать пробный урок по тестированию ПО. Была приятно удивлена — всё доступно и понятно! Через 4 месяца обучения нашла работу QA с зарплатой 80 000 ₽!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Л</div>
+        <div class="reviewer-info"><strong>Людмила К.</strong><span>QA Engineer, Пермь</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс техпомощника — идеальный старт для тех кто хочет в онлайн быстро! Через 6 недель уже работал с первым клиентом. Сейчас веду 4 проекта и зарабатываю 70 000 ₽ в месяц удалённо!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Г</div>
+        <div class="reviewer-info"><strong>Григорий С.</strong><span>Технический помощник, Барнаул</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Пробный урок по фотографии показал мне насколько это круто! Купила курс, освоила Adobe Lightroom и Premiere Pro. Сейчас снимаю свадьбы и корпоративы. Доход 120 000+ ₽ в месяц!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Ю</div>
+        <div class="reviewer-info"><strong>Юлия П.</strong><span>Фотограф-видеограф, Самара</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Повышение квалификации по аналитике данных — это был прорыв в карьере! Получил новую должность с зарплатой 140 000 ₽. Курс окупился за первую же зарплату. Рекомендую всем специалистам!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">В</div>
+        <div class="reviewer-info"><strong>Виктор З.</strong><span>Аналитик данных, Казань</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Сначала скептически относилась к онлайн-курсам. Но пробный вебинар по SMM изменил всё! Живой преподаватель, реальные кейсы, практические задания. Через 3 месяца уже зарабатывала 60 000 ₽!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">И</div>
+        <div class="reviewer-info"><strong>Ирина Б.</strong><span>SMM-специалист, Нижний Новгород</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Мне 47 лет и я решился сменить профессию. Прошёл бесплатный вебинар по нейросетям — был восхищён! Полный курс пройден за 2 месяца. Теперь помогаю бизнесам внедрять AI. Зарабатываю 100 000 ₽!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">А</div>
+        <div class="reviewer-info"><strong>Андрей Ф.</strong><span>AI-консультант, Красноярск</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс продакт-менеджера структурировал всё что я знала интуитивно. Пробный урок был настолько насыщенным что сразу купила полный. Через 5 месяцев — должность Senior PM с зарплатой 220 000 ₽!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">М</div>
+        <div class="reviewer-info"><strong>Марина Ш.</strong><span>Senior PM, Санкт-Петербург</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Открыла магазин на Wildberries после курса по маркетплейсам. Страшно было начинать, но кураторы поддерживали на каждом шаге. Сейчас оборот 250 000 ₽ в месяц и планирую нанять помощника!</p>
       <div class="reviewer">
         <div class="reviewer-avatar">О</div>
-        <div class="reviewer-info"><strong>Ольга Т.</strong><span>Технический ассистент, Уфа</span></div>
+        <div class="reviewer-info"><strong>Оксана В.</strong><span>Предприниматель, Волгоград</span></div>
       </div>
     </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Бесплатный пробный урок по дизайну интерьера был лучшим что со мной случалось! Понял что это моё призвание. Курс пройден, портфолио собрано, первые клиенты найдены. Счастлив как никогда!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Е</div>
+        <div class="reviewer-info"><strong>Евгений К.</strong><span>Дизайнер интерьера, Уфа</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Работала кассиром в магазине. После пробного вебинара по техпомощнику поняла — это моё! За 2 месяца прошла курс и нашла удалённую работу. Зарплата выросла в 2 раза. Горжусь собой!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">З</div>
+        <div class="reviewer-info"><strong>Зинаида Н.</strong><span>Технический ассистент, Саратов</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Прошёл пробный урок по разработке игр и не смог остановиться! Весь курс пройден за 4 месяца вместо 6 — так было интересно. Уже продал первую мобильную игру за 150 000 рублей!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Н</div>
+        <div class="reviewer-info"><strong>Никита В.</strong><span>Разработчик игр, Томск</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Курс психолога онлайн дал мне не только профессию но и понимание себя. Бесплатный вебинар был таким глубоким что я сразу записалась на полный курс. Сейчас веду практику и помогаю 15 клиентам!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">С</div>
+        <div class="reviewer-info"><strong>Светлана Г.</strong><span>Психолог-консультант, Хабаровск</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">SMM курс полностью оправдал ожидания! Начинал с нуля — не знал ничего о соцсетях. Сейчас веду аккаунты 6 компаний и зарабатываю 110 000 ₽ в месяц. Лучшее вложение денег в жизни!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">Б</div>
+        <div class="reviewer-info"><strong>Борис К.</strong><span>SMM-менеджер, Воронеж</span></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">После пробного вебинара по повышению квалификации сразу поняла что мне это нужно. Добавила к своим навыкам работу с AI-инструментами. Подняла ценник в 2 раза — клиенты не уходят!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">А</div>
+        <div class="reviewer-info"><strong>Алина Д.</strong><span>Копирайтер-маркетолог, Ярославль</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
